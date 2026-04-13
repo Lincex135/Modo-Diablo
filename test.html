@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Modo Diablo</title>
+    <link rel="stylesheet" href="css/style_test.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+
+<body class="test">
+    <nav>
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="historia.html">Historia</a></li>
+            <li><a href="duki.html">Duki</a></li>
+            <li><a href="ysy_a.html">YSY A</a></li>
+            <li><a href="neo_pistea.html">Neo Pistea</a></li>
+            <li><a href="musica.html">Música</a></li>
+            <li><a href="test.html">Test</a></li>
+        </ul>
+
+        <img src="img/sol_de_mayo.png" class="sol" alt="Sol de Mayo">
+
+        <div class="info">
+            <span>Ximena López Rubio</span>
+            <span>1 DAM</span>
+            <span>IES Leonardo Da Vinci</span>
+        </div>
+    </nav>
+
+    <div class="test-header">
+        <p class="subtitulo">¿Cuánto sabes?</p>
+        <h1>Test Modo Diablo</h1>
+        <div class="barra-progreso-wrap">
+            <span id="progreso-texto">0 de 20 respondidas</span>
+            <div class="barra-fondo">
+                <div class="barra-relleno" id="barra-relleno"></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="pagina">
+        <div class="formulario">
+            <form name="test_mododiablo" method="post" action="/send.php">
+
+                <fieldset>
+                    <legend>Datos personales</legend>
+                    <label>Nombre:
+                        <input type="text" name="nombre" required placeholder="Escribe tu nombre">
+                    </label>
+                    <label>Apellidos:
+                        <input type="text" name="apellidos" required placeholder="Escribe tus apellidos">
+                    </label>
+                    <label>Email:
+                        <input type="email" name="correo" title="Introduce un email correcto"
+                            placeholder="ejemplo@ejemplo.com" required>
+                    </label>
+                    <label>Número de teléfono:
+                        <input type="tel" pattern="[6][0-9]{8}" title="Introduce un número de teléfono correcto"
+                            placeholder="601234567" maxlength="9" required>
+                    </label>
+                    <label class="opcion-label" style="margin-top:0.6rem">
+                        <input type="checkbox" name="aceptar_terminos" required>
+                        Acepto los términos y condiciones
+                    </label>
+                </fieldset>
+
+                <p
+                    style="font-family:Arial,sans-serif;font-size:0.9rem;color:rgba(255,255,255,0.6);margin-bottom:1.2rem;">
+                    Responde a las siguientes preguntas sobre la historia, integrantes y música del colectivo.
+                </p>
+
+                <fieldset>
+                    <legend>Preguntas tipo test</legend>
+
+                    <p class="pregunta"><span class="num-pregunta">1</span> ¿En qué ciudad surgió Modo Diablo?</p>
+                    <label class="opcion-label"><input type="radio" name="p1" value="Madrid" required> Madrid</label>
+                    <label class="opcion-label"><input type="radio" name="p1" value="Buenos Aires"> Buenos Aires</label>
+                    <label class="opcion-label"><input type="radio" name="p1" value="Lima"> Lima</label>
+
+                    <p class="pregunta"><span class="num-pregunta">2</span> ¿Qué evento fue clave para el origen del
+                        grupo?</p>
+                    <label class="opcion-label"><input type="radio" name="p2" value="Red Bull" required> Red Bull
+                        Batalla</label>
+                    <label class="opcion-label"><input type="radio" name="p2" value="Quinto"> El Quinto Escalón</label>
+                    <label class="opcion-label"><input type="radio" name="p2" value="Cosquin"> Cosquín Rock</label>
+
+                    <p class="pregunta"><span class="num-pregunta">3</span> ¿Quién organizó El Quinto Escalón?</p>
+                    <select name="p3" required>
+                        <option value="">-- Selecciona --</option>
+                        <option>Duki</option>
+                        <option>YSY A</option>
+                        <option>Neo Pistea</option>
+                    </select>
+
+                    <p class="pregunta"><span class="num-pregunta">4</span> ¿Cuántos integrantes formaban Modo Diablo?
+                    </p>
+                    <input type="number" name="p4" min="1" max="5" required>
+
+                    <p class="pregunta"><span class="num-pregunta">5</span> Marca los integrantes del grupo:</p>
+                    <label class="opcion-label"><input type="checkbox" name="p5" value="Duki"> Duki</label>
+                    <label class="opcion-label"><input type="checkbox" name="p5" value="YSY A"> YSY A</label>
+                    <label class="opcion-label"><input type="checkbox" name="p5" value="Neo Pistea"> Neo Pistea</label>
+                    <label class="opcion-label"><input type="checkbox" name="p5" value="Bad Bunny"> Bad Bunny</label>
+
+                    <p class="pregunta"><span class="num-pregunta">6</span> ¿Cómo se llamaba la casa conocida como "La
+                        Cuna del Trap"?</p>
+                    <label class="opcion-label"><input type="radio" name="p6" required> Parque Rivadavia</label>
+                    <label class="opcion-label"><input type="radio" name="p6"> Antezana 247</label>
+                    <label class="opcion-label"><input type="radio" name="p6"> Luna Park</label>
+
+                    <p class="pregunta"><span class="num-pregunta">7</span> ¿Qué estilo musical representa el grupo
+                        principalmente?</p>
+                    <label class="opcion-label"><input type="radio" name="p7" required> Rock</label>
+                    <label class="opcion-label"><input type="radio" name="p7"> Trap</label>
+                    <label class="opcion-label"><input type="radio" name="p7"> Salsa</label>
+
+                    <p class="pregunta"><span class="num-pregunta">8</span> ¿Qué elemento es típico del trap?</p>
+                    <label class="opcion-label"><input type="radio" name="p8" required> 808 potentes</label>
+                    <label class="opcion-label"><input type="radio" name="p8"> Violines clásicos</label>
+                    <label class="opcion-label"><input type="radio" name="p8"> Flauta dulce</label>
+
+                    <p class="pregunta"><span class="num-pregunta">9</span> Duki comenzó principalmente en:</p>
+                    <label class="opcion-label"><input type="radio" name="p9" required> Pop</label>
+                    <label class="opcion-label"><input type="radio" name="p9"> Freestyle</label>
+                    <label class="opcion-label"><input type="radio" name="p9"> Jazz</label>
+
+                    <p class="pregunta"><span class="num-pregunta">10</span> ¿Qué canción pertenece a Modo Diablo?</p>
+                    <label class="opcion-label"><input type="radio" name="p10" required> Despacito</label>
+                    <label class="opcion-label"><input type="radio" name="p10"> Vuelta a la Luna (Remix)</label>
+                    <label class="opcion-label"><input type="radio" name="p10"> La Macarena</label>
+
+                    <p class="pregunta"><span class="num-pregunta">11</span> YSY A destaca por:</p>
+                    <label class="opcion-label"><input type="radio" name="p11" required> Rimas técnicas</label>
+                    <label class="opcion-label"><input type="radio" name="p11"> Ópera</label>
+                    <label class="opcion-label"><input type="radio" name="p11"> Música clásica</label>
+
+                    <p class="pregunta"><span class="num-pregunta">12</span> Neo Pistea se caracteriza por:</p>
+                    <label class="opcion-label"><input type="radio" name="p12" required> Voz grave y oscura</label>
+                    <label class="opcion-label"><input type="radio" name="p12"> Voz infantil</label>
+                    <label class="opcion-label"><input type="radio" name="p12"> Instrumental acústico</label>
+
+                    <p class="pregunta"><span class="num-pregunta">13</span> ¿En qué parque se celebraba El Quinto
+                        Escalón?</p>
+                    <label class="opcion-label"><input type="radio" name="p13" required> Parque Rivadavia</label>
+                    <label class="opcion-label"><input type="radio" name="p13"> Retiro</label>
+                    <label class="opcion-label"><input type="radio" name="p13"> Palermo</label>
+
+                    <p class="pregunta"><span class="num-pregunta">14</span> ¿Qué plataforma ayudó a difundir sus
+                        batallas?</p>
+                    <label class="opcion-label"><input type="radio" name="p16" required> YouTube</label>
+                    <label class="opcion-label"><input type="radio" name="p16"> TikTok</label>
+                    <label class="opcion-label"><input type="radio" name="p16"> Netflix</label>
+
+                    <p class="pregunta"><span class="num-pregunta">15</span> ¿En qué década comenzó a ganar fuerza el
+                        trap argentino?</p>
+                    <label class="opcion-label"><input type="radio" name="p21" required> Años 90</label>
+                    <label class="opcion-label"><input type="radio" name="p21"> Década de 2010</label>
+                    <label class="opcion-label"><input type="radio" name="p21"> Años 80</label>
+
+                    <p class="pregunta"><span class="num-pregunta">16</span> ¿Qué representaba "Modo Diablo" más allá de
+                        ser un grupo?</p>
+                    <label class="opcion-label"><input type="radio" name="p22" required> Una discográfica</label>
+                    <label class="opcion-label"><input type="radio" name="p22"> Una actitud y mentalidad
+                        artística</label>
+                    <label class="opcion-label"><input type="radio" name="p22"> Una marca de ropa</label>
+
+                    <p class="pregunta"><span class="num-pregunta">17</span> Marca los lugares relacionados con los
+                        orígenes del grupo:</p>
+                    <label class="opcion-label"><input type="checkbox" name="p23" value="parque"> Parque
+                        Rivadavia</label>
+                    <label class="opcion-label"><input type="checkbox" name="p23" value="antezana"> Antezana 247</label>
+                    <label class="opcion-label"><input type="checkbox" name="p23" value="estadio"> Estadio
+                        Bernabéu</label>
+
+                    <p class="pregunta"><span class="num-pregunta">18</span> ¿Qué tipo de ambiente tenía El Quinto
+                        Escalón?</p>
+                    <label class="opcion-label"><input type="radio" name="p24" required> Formal y con jurado
+                        profesional</label>
+                    <label class="opcion-label"><input type="radio" name="p24"> Callejero y cercano al público</label>
+                    <label class="opcion-label"><input type="radio" name="p24"> Solo online sin público</label>
+
+                    <p class="pregunta"><span class="num-pregunta">19</span> ¿Qué combinación describe mejor su sonido
+                        musical?</p>
+                    <select name="p25" required>
+                        <option value="">-- Selecciona --</option>
+                        <option>Trap + identidad urbana argentina</option>
+                        <option>Jazz + blues</option>
+                        <option>Reggae + ska</option>
+                    </select>
+
+                    <p class="pregunta"><span class="num-pregunta">20</span> ¿Qué impacto tuvo Modo Diablo en la escena
+                        argentina?</p>
+                    <label class="opcion-label"><input type="radio" name="p26" required> Desapareció rápidamente sin
+                        influencia</label>
+                    <label class="opcion-label"><input type="radio" name="p26"> Popularizó el trap y abrió camino a
+                        nuevos artistas</label>
+                    <label class="opcion-label"><input type="radio" name="p26"> Solo actuó fuera del país</label>
+
+                </fieldset>
+
+                <div class="botones-form">
+                    <input type="submit" value="Enviar respuestas">
+                    <input type="reset" value="Borrar formulario">
+                </div>
+
+            </form>
+        </div>
+    </div>
+    <script src="js/script_test.js"></script>
+</body>
+
+</html>

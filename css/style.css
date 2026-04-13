@@ -1,0 +1,481 @@
+:root {
+    --color-primario: rgb(117, 170, 219);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+
+/* TIPOGRAFÍA */
+h1, h2, h3 {
+    font-family: 'Bebas Neue', sans-serif;
+    letter-spacing: 2px;
+}
+
+p, li, td, th, label, span, nav, nav a, nav li {
+    font-family: 'Inter', sans-serif;
+}
+
+h2 {
+    color: var(--color-primario);
+    text-shadow: 0 0 25px rgba(64, 163, 255, 0.5);
+}
+
+
+/* NAV */
+nav {
+    position: relative;
+    min-height: 50px;
+    padding: 0.5rem 1rem;
+    background: linear-gradient(to bottom, #75AADB 0%, #75AADB 33.33%, white 33.33%, white 66.66%, #75AADB 66.66%, #75AADB 100%);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-shrink: 0;
+    box-sizing: border-box;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 0.8rem;
+    padding: 0;
+    margin: 0;
+    z-index: 2;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+nav a {
+    text-decoration: none;
+    color: black;
+}
+
+nav .sol {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    height: 30px;
+    width: auto;
+    pointer-events: none;
+    z-index: 1;
+}
+
+nav .info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 0.2rem;
+    z-index: 2;
+    font-size: small;
+    color: black;
+}
+
+
+/* FONDOS POR PÁGINA */
+body.historia {
+    background-image: url("../img/modo_diablo_fondo2.png");
+    background-repeat: repeat-y;
+    background-size: cover;
+    color: #fff;
+}
+
+body.duki {
+    background-image: url("../img/fondo_alas_morado.png");
+    color: #fff;
+}
+
+body.ysy_a {
+    background-image: url("../img/ysy_fondo_am_resized.jpg");
+    color: #fff;
+}
+
+body.neo_pistea {
+    background-image: url("../img/culto_logo_roj2.jpg");
+    color: #fff;
+}
+
+body.musica {
+    background-image: url("../img/fondo_musica.png");
+    color: #fff;
+    background-size: 100% auto;
+    background-repeat: repeat-y;
+    background-position: top center;
+}
+
+
+/* LAYOUT GENERAL */
+div.pagina {
+    padding: 3rem;
+}
+
+#hero {
+    width: 100vw;
+    flex: 1;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7)), url("../img/modoDiablo1.jpg");
+    background-position: center;
+    background-size: cover;
+    padding: 10rem;
+    display: flex;
+    align-items: center;
+
+    .acciones {
+        color: white;
+        width: 25rem;
+    }
+
+    p {
+        color: #cacaca;
+        font-size: large;
+    }
+
+    a {
+        border-radius: .25rem;
+        text-transform: uppercase;
+        font-style: normal;
+        font-weight: 400;
+        padding-left: 25px;
+        padding-right: 25px;
+        color: #fff;
+        -webkit-clip-path: polygon(0 0, 0 0, 100% 0, 100% 0, 100% calc(100% - 15px), calc(100% - 15px) 100%, 15px 100%, 0 100%);
+        clip-path: polygon(0 0, 0 0, 100% 0, 100% 0, 100% calc(100% - 15px), calc(100% - 15px) 100%, 15px 100%, 0 100%);
+        height: 60px;
+        font-size: 1.2rem;
+        line-height: 14px;
+        letter-spacing: 1.2px;
+        transition: .2s .1s;
+        background-image: linear-gradient(90deg, #1c1c1c, var(--color-primario));
+        border: 0 solid;
+        overflow: hidden;
+        text-decoration: none;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        font-family: Arial;
+    }
+
+    a:hover {
+        cursor: pointer;
+        transition: all .3s ease-in;
+        padding-right: 30px;
+        padding-left: 30px;
+    }
+}
+
+
+/* TABLA */
+table {
+    align-self: center;
+    margin: 1rem auto;
+    width: 80%;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    border-collapse: separate;
+    border-spacing: 0;
+    background: #fff;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    color: black;
+}
+
+th, td {
+    padding: 0.75rem;
+    text-align: center;
+    border-right: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+}
+
+tr td:last-child,
+tr th:last-child {
+    border-right: none;
+}
+
+tbody tr:last-child td {
+    border-bottom: none;
+}
+
+th {
+    background-color: var(--color-primario);
+    color: white;
+}
+
+
+/* FOTOS */
+.modoDiablo2,
+.duki3,
+.ysya2,
+.neopistea2 {
+    width: 320px;
+    height: 180px;
+    border-radius: 10px;
+}
+
+
+/* INTRODUCCIÓN */
+.contenedor-bloques {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+    margin: 2rem auto;
+}
+
+.bloque {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    background-color: var(--color-primario);
+    border-radius: 10px;
+    padding: 1rem;
+    margin: 1rem auto;
+    max-width: 400px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.bloque img {
+    width: 320px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    border-radius: 10px;
+}
+
+.bloque p {
+    font-size: 1rem;
+    color: var(--color-texto);
+    margin: auto;
+}
+
+body.historia .contenedor-bloques .bloque,
+body.duki .contenedor-bloques .bloque,
+body.ysy_a .contenedor-bloques .bloque,
+body.neo_pistea .contenedor-bloques .bloque {
+    background-color: rgba(117, 170, 219, 0.82);
+    backdrop-filter: blur(4px);
+}
+
+
+/* SECCIONES DE TEXTO */
+body.historia .pagina .texto section,
+body.duki .pagina .texto section,
+body.ysy_a .pagina .texto section,
+body.neo_pistea .pagina .texto section {
+    background: rgba(10, 10, 20, 0.72);
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+    border-radius: 14px;
+    padding: 1.6rem 2rem;
+    margin-bottom: 1.8rem;
+    border: 1px solid rgba(255, 255, 255, 0.07);
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.35);
+}
+
+body.historia .pagina .texto section h2,
+body.duki .pagina .texto section h2,
+body.ysy_a .pagina .texto section h2,
+body.neo_pistea .pagina .texto section h2 {
+    margin-top: 0;
+}
+
+
+/* PLATAFORMAS */
+.plataformas-section {
+    text-align: left;
+}
+
+.plataformas-grid {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    padding: 1rem 0 1.5rem;
+}
+
+.plat-link {
+    text-decoration: none;
+}
+
+.plat-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 1rem 1.2rem;
+    border-radius: 14px;
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(6px);
+    cursor: pointer;
+    transition: transform 0.25s ease, background 0.25s ease, box-shadow 0.25s ease;
+    will-change: transform;
+    min-width: 90px;
+}
+
+.plat-card:hover {
+    transform: translateY(-8px) scale(1.08);
+    background: rgba(117, 170, 219, 0.25);
+    box-shadow: 0 12px 28px rgba(117, 170, 219, 0.35);
+}
+
+.plat-card img {
+    display: block;
+    width: 64px;
+    height: 64px;
+    object-fit: contain;
+    transition: filter 0.25s ease;
+}
+
+.plat-card:hover img {
+    filter: drop-shadow(0 0 8px rgba(117, 170, 219, 0.8));
+}
+
+.plat-nombre {
+    font-size: 0.78rem;
+    font-family: Arial, sans-serif;
+    color: rgba(255, 255, 255, 0.85);
+    letter-spacing: 0.5px;
+    white-space: nowrap;
+}
+
+
+/* BARRA NAVEGACIÓN MÚSICA */
+.nav-buttons {
+    display: flex;
+    width: 100%;
+}
+
+.nav-buttons a {
+    flex: 1;
+    text-align: center;
+    background-color: #ee2b38;
+    color: white;
+    text-decoration: none;
+    padding: 1rem 0;
+    font-weight: bold;
+    font-size: 1rem;
+    border-right: 2px solid #a11d25;
+    transition: background-color 0.2s, transform 0.2s;
+}
+
+.nav-buttons a:last-child {
+    border-right: none;
+}
+
+.nav-buttons a:hover {
+    background-color: #d35d5d;
+    transform: translateY(-2px);
+}
+
+
+/* SPOTIFY EN MÚSICA */
+.spotify-container h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 2em;
+}
+
+.spotify-container section {
+    margin-bottom: 4rem;
+    display: grid;
+    grid-template-columns: repeat(2, 25rem);
+    gap: 0.25rem 3rem;
+    justify-content: center;
+}
+
+.spotify-iframe {
+    position: relative;
+    width: 100%;
+    padding-top: 50%;
+}
+
+.spotify-iframe iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 12px;
+}
+
+.music-note {
+    position: fixed;
+    top: -60px;
+    font-size: 1.8rem;
+    opacity: 0;
+    pointer-events: none;
+    user-select: none;
+    z-index: 0;
+    animation: noteFall linear forwards;
+}
+
+@keyframes noteFall {
+    0% {
+        transform: translateY(0) rotate(0deg) scale(0.8);
+        opacity: 0;
+    }
+    10% {
+        opacity: 0.85;
+    }
+    85% {
+        opacity: 0.7;
+    }
+    100% {
+        transform: translateY(110vh) rotate(360deg) scale(1.1);
+        opacity: 0;
+    }
+}
+
+
+/* IFRAMES */
+body.historia iframe[src*="google.com/maps"] {
+    display: block;
+    margin: 1.5rem auto;
+    width: 40%;
+    height: 300px;
+    border: 3px solid var(--color-primario);
+    border-radius: 12px;
+    box-shadow: 0 0 20px rgba(117, 170, 219, 0.4);
+}
+
+body.historia div.flex-mapa iframe[src*="google.com/maps"] {
+    margin: 0;
+    width: 40%;
+    height: 300px;
+}
+
+iframe[src*="youtube.com"] {
+    border: 3px solid var(--color-primario);
+    border-radius: 12px;
+    box-shadow: 0 0 20px rgba(117, 170, 219, 0.4);
+}
+
+
+/* MULTIMEDIA */
+section.multimedia {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+section.multimedia h2 {
+    width: 100%;
+    text-align: left;
+}
