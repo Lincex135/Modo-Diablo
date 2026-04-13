@@ -2,8 +2,6 @@
 
 Proyecto de Desarrollo Web — Página web sobre el colectivo de trap argentino **Modo Diablo**, desarrollado por [Ximena López Rubio](https://github.com/Lincex135)
 
-> Proyecto realizado para la asignatura de **1º DAM** en el **IES Leonardo Da Vinci**
-
 ## 🧾 Descripción
 
 **Modo Diablo 247** es un sitio web estático dedicado al trío de trap argentino formado por **Duki**, **YSY A** y **Neo Pistea**. La web recoge la historia del colectivo, una página individual por cada artista con su biografía, discografía y enlaces a plataformas de streaming, una sección de música con reproductores de Spotify, y un test interactivo de 20 preguntas sobre el grupo.
